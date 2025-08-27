@@ -27,3 +27,4 @@ Enter the bootloader in 3 ways:
 * **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
 
 qmk compile -kb beekeeb/piantor_pro -km vial
+cd \\wsl.localhost\Ubuntu-24.04\home\hentzd\repos\vial-qmk-piantor-pro\.build
