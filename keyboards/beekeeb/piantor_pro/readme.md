@@ -28,3 +28,27 @@ Enter the bootloader in 3 ways:
 
 qmk compile -kb beekeeb/piantor_pro -km vial
 cd \\wsl.localhost\Ubuntu-24.04\home\hentzd\repos\vial-qmk-piantor-pro\.build
+
+## Building (macOS)
+
+This is a 36-key (`LAYOUT_split_3x5_3`) board; the customized keymap lives in the
+`vial` keymap. Build command:
+
+```sh
+qmk compile -kb beekeeb/piantor_pro -km vial
+```
+
+The keg-only ARM toolchain must be on `PATH` (already added to `~/.zshrc`):
+
+```sh
+export PATH="/opt/homebrew/opt/arm-none-eabi-gcc@8/bin:/opt/homebrew/opt/arm-none-eabi-binutils/bin:$PATH"
+```
+
+Or run the helper script from the repo root, which compiles and drops the
+firmware into `builds/`:
+
+```sh
+./build-piantor.sh
+```
+
+The resulting firmware is `builds/beekeeb_piantor_pro_vial.uf2`.
