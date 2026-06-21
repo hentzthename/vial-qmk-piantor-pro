@@ -4,7 +4,7 @@
 set -euo pipefail
 
 KB="beekeeb/piantor_pro"
-KM="vial"
+KM="hentzthename"
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Ensure the keg-only ARM toolchain is on PATH (no-op if already there)

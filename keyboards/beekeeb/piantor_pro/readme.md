@@ -26,16 +26,18 @@ Enter the bootloader in 3 ways:
 * **Physical reset button**: Briefly press the button on the back of the PCB - some may have pads you must short instead
 * **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
 
-qmk compile -kb beekeeb/piantor_pro -km vial
+qmk compile -kb beekeeb/piantor_pro -km hentzthename
 cd \\wsl.localhost\Ubuntu-24.04\home\hentzd\repos\vial-qmk-piantor-pro\.build
 
 ## Building (macOS)
 
-This is a 36-key (`LAYOUT_split_3x5_3`) board; the customized keymap lives in the
-`vial` keymap. Build command:
+This is a 36-key (`LAYOUT_split_3x5_3`) board. The customized keymap lives in the
+`hentzthename` keymap. The `vial` keymap is kept as a pristine copy of the
+upstream (`beekeeb`) 42-key layout so upstream changes can be pulled cleanly —
+don't build or edit it. Build command:
 
 ```sh
-qmk compile -kb beekeeb/piantor_pro -km vial
+qmk compile -kb beekeeb/piantor_pro -km hentzthename
 ```
 
 The keg-only ARM toolchain must be on `PATH` (already added to `~/.zshrc`):
@@ -51,4 +53,4 @@ firmware into `builds/`:
 ./build-piantor.sh
 ```
 
-The resulting firmware is `builds/beekeeb_piantor_pro_vial.uf2`.
+The resulting firmware is `builds/beekeeb_piantor_pro_hentzthename.uf2`.
